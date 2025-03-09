@@ -6,3 +6,13 @@ npm install @cucumber/cucumber playwright chai dotenv
 npm install --save-dev ajv
 npm install @playwright/test @cucumber/cucumber ajv
 npm install ajv-formats
+
+
+
+git remote set-url origin https://github.com/Ishaqq/Api-Automation-Using-Playwright-FrameWork-PageObjectModal.git
+
+git status
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+

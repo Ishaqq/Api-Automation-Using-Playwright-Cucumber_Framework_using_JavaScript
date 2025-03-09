@@ -1,8 +1,21 @@
-const { Before, After } = require('@cucumber/cucumber');
+const { Before, After, setWorldConstructor } = require('@cucumber/cucumber');
+const { request } = require('@playwright/test');
+const UserPage = require('../pages/userPage');
+
+// Set up custom world constructor
+setWorldConstructor(function () {
+    this.userPage = new UserPage();
+    this.apiContext = null;
+});
 
 Before(async function () {
-    console.log('Starting test...');
+    // Initialize API context before each scenario
+    this.apiContext = await request.newContext({
+        baseURL: "https://jsonplaceholder.typicode.com",
+    });
+    this.userPage.apiContext = this.apiContext; // Pass the apiContext to UserPage
 });
+
 
 After(async function () {
     if (this.response && this.response.json) {
@@ -19,5 +32,8 @@ After(async function () {
         }
     } else {
         console.warn("⚠️ Warning: this.response is undefined or not a valid response object.");
+    }
+    if (this.apiContext) {
+        await this.apiContext.dispose();
     }
 });

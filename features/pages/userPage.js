@@ -1,16 +1,8 @@
 
 
-const { request } = require("@playwright/test");
-
 class UserPage {
     constructor() {
-        this.apiContext = null;
-    }
-
-    async init() {
-        this.apiContext = await request.newContext({
-            baseURL: "https://jsonplaceholder.typicode.com",
-        });
+        this.apiContext = null; // API context will be injected from hooks.js
     }
 
     async getUsers() {
