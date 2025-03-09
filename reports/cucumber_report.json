@@ -1,0 +1,158 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;validate-schema-for-get-users-api",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Validate Schema for GET Users API",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2377899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I send a GET request to \"/users\"",
+            "match": {
+              "location": "features\\step_definations\\user.step.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 846946600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the response status should be \"200\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the response should match the user schema",
+            "match": {
+              "location": "features\\step_definations\\user.step.js:22"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1015399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;create-a-new-post",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Create a New Post",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 609699
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "title",
+                      "body",
+                      "userId"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Playwright API Test",
+                      "This is a sample post.",
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I send a POST request to \"/posts\" with the following data:",
+            "match": {
+              "location": "features\\step_definations\\user.step.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 355142700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the response status should be \"201\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the response should contain the same data",
+            "match": {
+              "location": "features\\step_definations\\user.step.js:48"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1218499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-testing-with-playwright",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API Testing with Playwright",
+    "tags": [],
+    "uri": "features\\user.feature"
+  }
+]

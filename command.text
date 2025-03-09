@@ -1,0 +1,8 @@
+
+npx playwright install
+npm install --save-dev @cucumber/cucumber
+npm install --save-dev multiple-cucumber-html-reporter
+npm install @cucumber/cucumber playwright chai dotenv
+npm install --save-dev ajv
+npm install @playwright/test @cucumber/cucumber ajv
+npm install ajv-formats
