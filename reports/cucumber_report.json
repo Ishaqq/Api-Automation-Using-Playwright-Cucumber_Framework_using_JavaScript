@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 808600
+              "duration": 1330899
             }
           },
           {
@@ -44,7 +44,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 539807200
+              "duration": 1406015300
             }
           },
           {
@@ -57,7 +57,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 309600
+              "duration": 255499
             }
           },
           {
@@ -70,7 +70,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 492700
+              "duration": 722600
             }
           }
         ],
@@ -89,7 +89,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 773999
+              "duration": 1273799
             }
           },
           {
@@ -98,11 +98,11 @@
             "line": 11,
             "name": "I send a GET request to \"/users?page=2\" with the stored token",
             "match": {
-              "location": "features\\step_definitions\\auth.step.js:47"
+              "location": "features\\step_definitions\\auth.step.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 164649699
+              "duration": 311543400
             }
           },
           {
@@ -115,7 +115,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 137999
+              "duration": 365899
             }
           },
           {
@@ -124,11 +124,11 @@
             "line": 13,
             "name": "the response should contain a list of users",
             "match": {
-              "location": "features\\step_definitions\\auth.step.js:55"
+              "location": "features\\step_definitions\\auth.step.js:81"
             },
             "result": {
               "status": "passed",
-              "duration": 34919300
+              "duration": 50775899
             },
             "embeddings": [
               {
@@ -153,7 +153,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 756000
+              "duration": 5838600
             }
           },
           {
@@ -191,11 +191,11 @@
             "line": 16,
             "name": "I send a POST request to \"/posts?draft=true\" with headers and the following data:",
             "match": {
-              "location": "features\\step_definitions\\auth.step.js:81"
+              "location": "features\\step_definitions\\auth.step.js:107"
             },
             "result": {
               "status": "passed",
-              "duration": 191940600
+              "duration": 604339799
             }
           },
           {
@@ -208,7 +208,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 480699
+              "duration": 275899
             }
           },
           {
@@ -217,11 +217,11 @@
             "line": 22,
             "name": "the response should contain the same post data",
             "match": {
-              "location": "features\\step_definitions\\auth.step.js:95"
+              "location": "features\\step_definitions\\auth.step.js:121"
             },
             "result": {
               "status": "passed",
-              "duration": 332000
+              "duration": 497499
             },
             "embeddings": [
               {
@@ -241,5 +241,87 @@
     "name": "API Authentication & Data Retrieval",
     "tags": [],
     "uri": "features\\auth.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-response-validation-using-pojo-like-classes-in-playwright;get-users-and-validate-response",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Get users and validate response",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 696199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I send a GET request to the users API pojo",
+            "match": {
+              "location": "features\\step_definitions\\userResponse.step.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 382506000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the responseBody should contain valid user data pojo",
+            "match": {
+              "location": "features\\step_definitions\\userResponse.step.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3122199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the responseBody status should be 200 pojo",
+            "match": {
+              "location": "features\\step_definitions\\userResponse.step.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 300400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the responseTime should be less than 500ms pojo",
+            "match": {
+              "location": "features\\step_definitions\\userResponse.step.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 584600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-response-validation-using-pojo-like-classes-in-playwright",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API response validation using POJO-like classes in Playwright",
+    "tags": [],
+    "uri": "features\\userResponse.feature"
   }
 ]

@@ -41,7 +41,8 @@ Then("the response status should be {int}", function (expectedStatus) {
 
 Then("I store the access token", function () {
   authToken = responseBody.token;
-  console.log("Stored Token:", authToken);
+  console.log("Stored Token:", authToken); 
+
 });
 
 Given("I send a GET request to {string} with the stored token", async function (endpoint) {
@@ -50,6 +51,31 @@ Given("I send a GET request to {string} with the stored token", async function (
   });
   responseBody = await response.json();
   console.log(responseBody);
+
+  //
+// Access page and per_page
+const page = responseBody.page;
+const perPage = responseBody.per_page;
+
+// Access data (first user)
+const firstUser = responseBody.data[0]; // First user object
+const firstUserId = firstUser.id;
+const firstUserEmail = firstUser.email;
+const firstUserName = firstUser.first_name;
+const firstUserAvatar = firstUser.avatar;
+
+// Access support section
+const supportUrl = responseBody.support.url;
+const supportText = responseBody.support.text;
+
+// Example output
+console.log("Page:", page);
+console.log("Per Page:", perPage);
+console.log("First User ID:", firstUserId);
+console.log("First User Email:", firstUserEmail);
+console.log("Support URL:", supportUrl);
+expect(supportUrl).to.equal('https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral');
+
 });
 
 Then("the response should contain a list of users", function () {
