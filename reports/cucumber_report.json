@@ -4,83 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "api-testing-with-playwright;validate-schema-for-get-users-api",
+        "id": "api-authentication-&-data-retrieval;login-and-get-token",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Validate Schema for GET Users API",
+        "name": "Login and Get Token",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 5081599
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I send a GET request to \"/users\"",
-            "match": {
-              "location": "features\\step_definations\\user.step.js:13"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1300310900
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 5,
-            "name": "the response status should be 200",
-            "match": {
-              "location": "features\\step_definations\\user.step.js:18"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2239999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "the response should match the user schema",
-            "match": {
-              "location": "features\\step_definations\\user.step.js:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 50987700
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 30867799
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "api-testing-with-playwright;create-a-new-post",
-        "keyword": "Scenario",
-        "line": 8,
-        "name": "Create a New Post",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1553799
+              "duration": 861199
             }
           },
           {
@@ -89,64 +23,199 @@
                 "rows": [
                   {
                     "cells": [
-                      "title",
-                      "body",
-                      "userId"
+                      "email",
+                      "password"
                     ]
                   },
                   {
                     "cells": [
-                      "Playwright API Test",
-                      "This is a sample post.",
-                      "1"
+                      "eve.holt@reqres.in",
+                      "cityslicka"
                     ]
                   }
                 ]
               }
             ],
             "keyword": "Given ",
-            "line": 9,
-            "name": "I send a POST request to \"/posts\" with the following data:",
+            "line": 4,
+            "name": "I send a POST request to \"/login\" with the following data:",
             "match": {
-              "location": "features\\step_definations\\user.step.js:48"
+              "location": "features\\step_definitions\\auth.step.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1620872799
+              "duration": 980478400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "features\\step_definitions\\auth.step.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 216199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I store the access token",
+            "match": {
+              "location": "features\\step_definitions\\auth.step.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 842000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-authentication-&-data-retrieval;fetch-users-using-token",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Fetch Users Using Token",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 839899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I send a GET request to \"/users?page=2\" with the stored token",
+            "match": {
+              "location": "features\\step_definitions\\auth.step.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151279400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 12,
-            "name": "the response status should be 201",
+            "name": "the response status should be 200",
             "match": {
-              "location": "features\\step_definations\\user.step.js:18"
+              "location": "features\\step_definitions\\auth.step.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 924800
+              "duration": 150499
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "the response should contain the same data",
+            "name": "the response should contain a list of users",
             "match": {
-              "location": "features\\step_definations\\user.step.js:62"
+              "location": "features\\step_definitions\\auth.step.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 12797200
+              "duration": 31792199
             }
-          },
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-authentication-&-data-retrieval;create-a-post-with-headers-and-query-params",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Create a Post with Headers and Query Params",
+        "steps": [
           {
-            "keyword": "After",
+            "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20179000
+              "duration": 1667000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "key",
+                      "value"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "title",
+                      "New API Post"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "body",
+                      "Sample Content"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "userId",
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I send a POST request to \"/posts?draft=true\" with headers and the following data:",
+            "match": {
+              "location": "features\\step_definitions\\auth.step.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 682121600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "the response status should be 201",
+            "match": {
+              "location": "features\\step_definitions\\auth.step.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 434900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the response should contain the same post data",
+            "match": {
+              "location": "features\\step_definitions\\auth.step.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 305600
             }
           }
         ],
@@ -154,11 +223,11 @@
         "type": "scenario"
       }
     ],
-    "id": "api-testing-with-playwright",
+    "id": "api-authentication-&-data-retrieval",
     "line": 1,
     "keyword": "Feature",
-    "name": "API Testing with Playwright",
+    "name": "API Authentication & Data Retrieval",
     "tags": [],
-    "uri": "features\\user.feature"
+    "uri": "features\\auth.feature"
   }
 ]

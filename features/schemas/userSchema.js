@@ -1,42 +1,33 @@
 module.exports ={
-    type: "array",
-    items: {
+    type: "object",
+    properties: {
+      page: { type: "integer" },
+      per_page: { type: "integer" },
+      total: { type: "integer" },
+      total_pages: { type: "integer" },
+      data: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            id: { type: "integer" },
+            email: { type: "string" },
+            first_name: { type: "string" },
+            last_name: { type: "string" },
+            avatar: { type: "string", format: "uri" }
+          },
+          required: ["id", "email", "first_name", "last_name", "avatar"]
+        }
+      },
+      support: {
         type: "object",
         properties: {
-            id: { type: "integer" },
-            name: { type: "string" },
-            username: { type: "string" },
-            email: { type: "string" },
-            address: {
-                type: "object",
-                properties: {
-                    street: { type: "string" },
-                    suite: { type: "string" },
-                    city: { type: "string" },
-                    zipcode: { type: "string" },
-                    geo: {
-                        type: "object",
-                        properties: {
-                            lat: { type: "string" },
-                            lng: { type: "string" }
-                        },
-                        required: ["lat", "lng"]
-                    }
-                },
-                required: ["street", "suite", "city", "zipcode", "geo"]
-            },
-            phone: { type: "string" },
-            website: { type: "string" },
-            company: {
-                type: "object",
-                properties: {
-                    name: { type: "string" },
-                    catchPhrase: { type: "string" },
-                    bs: { type: "string" }
-                },
-                required: ["name", "catchPhrase", "bs"]
-            }
+          url: { type: "string", format: "uri" },
+          text: { type: "string" }
         },
-        required: ["id", "name", "username", "email", "address", "phone", "website", "company"]
-    }
-};
+        required: ["url", "text"]
+      }
+    },
+    required: ["page", "per_page", "total", "total_pages", "data", "support"]
+  };
+  
