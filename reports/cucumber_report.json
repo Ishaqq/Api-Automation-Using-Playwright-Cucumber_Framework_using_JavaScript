@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 861199
+              "duration": 808600
             }
           },
           {
@@ -44,7 +44,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 980478400
+              "duration": 539807200
             }
           },
           {
@@ -57,7 +57,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 216199
+              "duration": 309600
             }
           },
           {
@@ -70,7 +70,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 842000
+              "duration": 492700
             }
           }
         ],
@@ -89,7 +89,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 839899
+              "duration": 773999
             }
           },
           {
@@ -102,7 +102,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 151279400
+              "duration": 164649699
             }
           },
           {
@@ -115,7 +115,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 150499
+              "duration": 137999
             }
           },
           {
@@ -128,8 +128,14 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31792199
-            }
+              "duration": 34919300
+            },
+            "embeddings": [
+              {
+                "data": "ewogICJwYWdlIjogMiwKICAicGVyX3BhZ2UiOiA2LAogICJ0b3RhbCI6IDEyLAogICJ0b3RhbF9wYWdlcyI6IDIsCiAgImRhdGEiOiBbCiAgICB7CiAgICAgICJpZCI6IDcsCiAgICAgICJlbWFpbCI6ICJtaWNoYWVsLmxhd3NvbkByZXFyZXMuaW4iLAogICAgICAiZmlyc3RfbmFtZSI6ICJNaWNoYWVsIiwKICAgICAgImxhc3RfbmFtZSI6ICJMYXdzb24iLAogICAgICAiYXZhdGFyIjogImh0dHBzOi8vcmVxcmVzLmluL2ltZy9mYWNlcy83LWltYWdlLmpwZyIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6IDgsCiAgICAgICJlbWFpbCI6ICJsaW5kc2F5LmZlcmd1c29uQHJlcXJlcy5pbiIsCiAgICAgICJmaXJzdF9uYW1lIjogIkxpbmRzYXkiLAogICAgICAibGFzdF9uYW1lIjogIkZlcmd1c29uIiwKICAgICAgImF2YXRhciI6ICJodHRwczovL3JlcXJlcy5pbi9pbWcvZmFjZXMvOC1pbWFnZS5qcGciCiAgICB9LAogICAgewogICAgICAiaWQiOiA5LAogICAgICAiZW1haWwiOiAidG9iaWFzLmZ1bmtlQHJlcXJlcy5pbiIsCiAgICAgICJmaXJzdF9uYW1lIjogIlRvYmlhcyIsCiAgICAgICJsYXN0X25hbWUiOiAiRnVua2UiLAogICAgICAiYXZhdGFyIjogImh0dHBzOi8vcmVxcmVzLmluL2ltZy9mYWNlcy85LWltYWdlLmpwZyIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6IDEwLAogICAgICAiZW1haWwiOiAiYnlyb24uZmllbGRzQHJlcXJlcy5pbiIsCiAgICAgICJmaXJzdF9uYW1lIjogIkJ5cm9uIiwKICAgICAgImxhc3RfbmFtZSI6ICJGaWVsZHMiLAogICAgICAiYXZhdGFyIjogImh0dHBzOi8vcmVxcmVzLmluL2ltZy9mYWNlcy8xMC1pbWFnZS5qcGciCiAgICB9LAogICAgewogICAgICAiaWQiOiAxMSwKICAgICAgImVtYWlsIjogImdlb3JnZS5lZHdhcmRzQHJlcXJlcy5pbiIsCiAgICAgICJmaXJzdF9uYW1lIjogIkdlb3JnZSIsCiAgICAgICJsYXN0X25hbWUiOiAiRWR3YXJkcyIsCiAgICAgICJhdmF0YXIiOiAiaHR0cHM6Ly9yZXFyZXMuaW4vaW1nL2ZhY2VzLzExLWltYWdlLmpwZyIKICAgIH0sCiAgICB7CiAgICAgICJpZCI6IDEyLAogICAgICAiZW1haWwiOiAicmFjaGVsLmhvd2VsbEByZXFyZXMuaW4iLAogICAgICAiZmlyc3RfbmFtZSI6ICJSYWNoZWwiLAogICAgICAibGFzdF9uYW1lIjogIkhvd2VsbCIsCiAgICAgICJhdmF0YXIiOiAiaHR0cHM6Ly9yZXFyZXMuaW4vaW1nL2ZhY2VzLzEyLWltYWdlLmpwZyIKICAgIH0KICBdLAogICJzdXBwb3J0IjogewogICAgInVybCI6ICJodHRwczovL2NvbnRlbnRjYWRkeS5pbz91dG1fc291cmNlPXJlcXJlcyZ1dG1fbWVkaXVtPWpzb24mdXRtX2NhbXBhaWduPXJlZmVycmFsIiwKICAgICJ0ZXh0IjogIlRpcmVkIG9mIHdyaXRpbmcgZW5kbGVzcyBzb2NpYWwgbWVkaWEgY29udGVudD8gTGV0IENvbnRlbnQgQ2FkZHkgZ2VuZXJhdGUgaXQgZm9yIHlvdS4iCiAgfQp9",
+                "mime_type": "application/json"
+              }
+            ]
           }
         ],
         "tags": [],
@@ -147,7 +153,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1667000
+              "duration": 756000
             }
           },
           {
@@ -185,11 +191,11 @@
             "line": 16,
             "name": "I send a POST request to \"/posts?draft=true\" with headers and the following data:",
             "match": {
-              "location": "features\\step_definitions\\auth.step.js:79"
+              "location": "features\\step_definitions\\auth.step.js:81"
             },
             "result": {
               "status": "passed",
-              "duration": 682121600
+              "duration": 191940600
             }
           },
           {
@@ -202,7 +208,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 434900
+              "duration": 480699
             }
           },
           {
@@ -211,12 +217,18 @@
             "line": 22,
             "name": "the response should contain the same post data",
             "match": {
-              "location": "features\\step_definitions\\auth.step.js:93"
+              "location": "features\\step_definitions\\auth.step.js:95"
             },
             "result": {
               "status": "passed",
-              "duration": 305600
-            }
+              "duration": 332000
+            },
+            "embeddings": [
+              {
+                "data": "U3RhdHVzIENvZGU6IFFwd0w1dGtlNFBucGphN1g0",
+                "mime_type": "text/plain"
+              }
+            ]
           }
         ],
         "tags": [],

@@ -68,6 +68,8 @@ Then("the response should contain a list of users", function () {
   });
 const validate = ajv.compile(userSchema);
   const valid = validate(responseBody);
+  this.attach(JSON.stringify(responseBody, null, 2), "application/json");
+ // this.attach(`Status Code: ${statusCode}`, "text/plain");
 expect(valid, `Data is invalid: ${JSON.stringify(validate.errors)}`).to.be.true;
 if (valid) {
   console.log("Data is valid");
@@ -93,5 +95,6 @@ dataTable.raw().forEach((row, index) => {
 Then("the response should contain the same post data", function () {
   expect(responseBody.title).to.equal("New API Post");
   expect(responseBody.body).to.equal("Sample Content");
+  this.attach(`Status Code: ${authToken}`, "text/plain");
   // expect(responseBody.userId).to.equal(2);
 });
